@@ -1,9 +1,9 @@
 Feature: Check visa requirement
 
-  Background: Open uk visa url
-    Given I am on the UK Visa web page
+  Background: Open UK visa Url
+    Given I am on the UK Visa web page and I accept cookies
 
-  Scenario Outline:  User provides nationality, purpose of visa
+  Scenario Outline: Check UK visa information status for Japan nationality and Tourism purpose
     Given I provide a nationality of '<countryName>'
     And I select the reason for visa as '<purpose>'
     When I submit the form
@@ -12,7 +12,7 @@ Feature: Check visa requirement
       | countryName | purpose  | message                                    |
       | Japan       | Tourism  | You won’t need a visa to come to the UK    |
 
-  Scenario Outline:  User provides nationality, purpose of visa
+  Scenario Outline: Check UK visa information status for Russian nationality and Tourism purpose
     Given I provide a nationality of '<countryName>'
     And I select the reason for visa as '<purpose>'
     And I state I am travelling or visiting a partner or family as '<visitFamily>'
@@ -22,7 +22,7 @@ Feature: Check visa requirement
       | countryName | purpose  | visitFamily | message                                 |
       | Russia      | Tourism  | No          | You’ll need a visa to come to the UK    |
 
-  Scenario Outline:  User provides nationality, purpose of visa
+  Scenario Outline: Check UK visa information status for Japan nationality and Study purpose
     Given I provide a nationality of '<countryName>'
     And I select the reason for visa as '<purpose>'
     And I state I am intending to stay for more than 6 months : true

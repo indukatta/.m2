@@ -1,4 +1,4 @@
-package starter.stepdefinitions;
+package visachecks.stepdefinitions;
 
 import io.cucumber.java.ParameterType;
 import io.cucumber.java.en.And;
@@ -6,14 +6,14 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
-import starter.steps.CheckVisaRequirementStatusSteps;
+import visachecks.steps.CheckVisaRequirementSteps;
 
-public class CheckUKVisaRequirements {
+public class CheckVisaSpecificationStepDefn {
 
     @Steps
-    CheckVisaRequirementStatusSteps statusSteps;
+    CheckVisaRequirementSteps statusSteps;
 
-    @Given("I am on the UK Visa web page")
+    @Given("I am on the UK Visa web page and I accept cookies")
     public void user_is_on_home_page(){
         statusSteps.openUKVisaHomePage();
     }

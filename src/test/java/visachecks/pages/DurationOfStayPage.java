@@ -1,4 +1,4 @@
-package starter.pages;
+package visachecks.pages;
 
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;

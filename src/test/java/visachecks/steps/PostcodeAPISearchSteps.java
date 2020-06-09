@@ -1,10 +1,10 @@
-package starter.steps;
+package visachecks.steps;
 
 import io.restassured.response.Response;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
 
-public class PostcodeAPIStatusCheckSteps {
+public class PostcodeAPISearchSteps {
 
     private String POSTCODE_SEARCH_BASE_URI = "https://api.postcodes.io/postcodes/";
     private Response response;
@@ -25,7 +25,7 @@ public class PostcodeAPIStatusCheckSteps {
     }
 
     @Step
-    public void searchIsExecutedSuccessfully(){
-        response.then().statusCode(200);
+    public void searchIsExecutedSuccessfully(int responseStatus){
+        response.then().statusCode(responseStatus);
     }
 }

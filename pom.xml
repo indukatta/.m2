@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.serenitybdd.starter</groupId>
-    <artifactId>serenity-cucumber-test-project</artifactId>
+    <artifactId>visa-checks-test-project</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -44,11 +44,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.0.13</version>
-        </dependency>
-        <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-core</artifactId>
             <version>${serenity.version}</version>
@@ -57,18 +52,6 @@
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-junit</artifactId>
-            <version>${serenity.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>net.serenity-bdd</groupId>
-            <artifactId>serenity-screenplay</artifactId>
-            <version>${serenity.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>net.serenity-bdd</groupId>
-            <artifactId>serenity-screenplay-webdriver</artifactId>
             <version>${serenity.version}</version>
             <scope>test</scope>
         </dependency>
@@ -125,8 +108,10 @@
                     <includes>
 <!--                        <include>**/*Test.java</include>-->
 <!--                        <include>**/Test*.java</include>-->
-                        <include>**/*TestSuite.java</include>
+<!--                        <include>**/*TestSuite.java</include>-->
 <!--                        <include>**/When*.java</include>-->
+                        <include>**/*TestRunner.java</include>
+
                     </includes>
                     <systemPropertyVariables>
                         <webdriver.base.url>${webdriver.base.url}</webdriver.base.url>

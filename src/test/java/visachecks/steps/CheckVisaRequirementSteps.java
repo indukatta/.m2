@@ -1,9 +1,9 @@
-package starter.steps;
+package visachecks.steps;
 
 import net.thucydides.core.annotations.Step;
-import starter.pages.*;
+import visachecks.pages.*;
 
-public class CheckVisaRequirementStatusSteps {
+public class CheckVisaRequirementSteps {
 
     HomePage homePage;
     NationalityDetailsPage nationalityDetailsPage;
